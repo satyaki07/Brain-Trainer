@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView pointsTextView;
     TextView sumTextView;
     TextView timerTextView;
+    TextView highScoreTextView;
     ConstraintLayout gameLayout;
 
     Button button0;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     int locationOfCorrectAns;
     int numOfQuestions = 0;
     int score = 0;
+    int highScore = 0;
 
 
     public void playAgain(View view) {
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         timerTextView.setText("30S");
         pointsTextView.setText("0/0");
         resultTextView.setText("");
+        highScoreTextView.setVisibility(View.INVISIBLE);
         playAgainButton.setVisibility(View.INVISIBLE);
 
         button0.setEnabled(true);
@@ -61,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                if(score > highScore) {
+                    highScore = score;
+                    highScoreTextView.setText("New Highscore: " + Integer.toString(highScore) + "/" + Integer.toString(numOfQuestions));
+                }
+                else{
+                    highScoreTextView.setText("Highscore: " + Integer.toString(highScore));
+                }
+                highScoreTextView.setVisibility(View.VISIBLE);
                 playAgainButton.setVisibility(View.VISIBLE);
                 timerTextView.setText("0S");
                 resultTextView.setText("Your score " + Integer.toString(score) + "/" + Integer.toString(numOfQuestions));
@@ -151,6 +162,8 @@ public class MainActivity extends AppCompatActivity {
         button3 = (Button)findViewById(R.id.button3);
 
         playAgainButton = (Button)findViewById(R.id.playAgainButton);
+
+        highScoreTextView = (TextView) findViewById(R.id.highScoreTextView);
 
         resultTextView = (TextView)findViewById(R.id.resultTextView);
 

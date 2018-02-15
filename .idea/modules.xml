@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BrainTrainer.iml" filepath="$PROJECT_DIR$/BrainTrainer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Brain-Trainer.iml" filepath="$PROJECT_DIR$/Brain-Trainer.iml" />
+      <module fileurl="file://C:\Users\satya\Desktop\Brain-Trainer\BrainTrainer.iml" filepath="C:\Users\satya\Desktop\Brain-Trainer\BrainTrainer.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\satya\Desktop\Brain-Trainer\app\app.iml" filepath="C:\Users\satya\Desktop\Brain-Trainer\app\app.iml" />
     </modules>
   </component>
 </project>
